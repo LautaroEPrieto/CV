@@ -52,7 +52,6 @@ body{
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-    
 }
 
 .navbar{
@@ -140,6 +139,152 @@ section{
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+}
+
+.cube {
+    position: relative;
+    width: 75px;
+    left: 170%;
+    height: 75px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    0%    
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube div{
+    position: absolute;
+    margin-top: -150px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d ;
+}
+
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, var(--main-color));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.1px);
+}
+
+.cube2 {
+    position: relative;
+    width: 75px;
+    left: 210%;
+    height: 75px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    0%    
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube2 div{
+    position: absolute;
+    margin-top: -80px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d ;
+}
+
+.cube2 div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, var(--main-color));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.1px);
+}
+
+.cube3 {
+    position: relative;
+    width: 75px;
+    left: 170%;
+    height: 75px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    0%    
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube3 div{
+    position: absolute;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d ;
+}
+
+.cube3 div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, var(--main-color));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.1px);
+}
+
+.top {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #0A0A0A;
+    transform: rotateX(90deg) translateZ(35px);
+}
+
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: var(--main-color);
+    transform: translateZ(-120px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(0, 255, 0, 0.2),
+    0 0 200px rgba(0, 255, 0, 0.4),
+    0 0 300px rgba(0, 255, 0, 0.6),
+    0 0 400px rgba(0, 255, 0, 0.8),
+    0 0 500px rgba(0, 255, 0, 1),
+
 }
 
 /* Boton de talk and hire me*/
@@ -255,14 +400,14 @@ section{
     flex-direction: column;
     gap: 2rem;
     background: var(grey);
-    padding-bottom: 6rem;
+    padding-bottom: rem;
 }
 .about  h2 span{
     color: var(--main-color);
 }
 .heading{
     position: relative;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -299,13 +444,18 @@ section{
 .about-content{
     text-align: center;
 }
-
+.about h2{
+    font-size: 3rem,
+}
 .about-content  h3{
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+}
+.about-content h3 span{
+    color: var(--main-color);
 }
 
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 2rem  0 3rem;
 }
 
@@ -444,6 +594,7 @@ section{
 
 .skills-column .title{
     font-size: 2.5rem;
+    text-align: center;
     margin: 0 0 1.5rem;
 }
 /* SKILLS  marco */
@@ -455,10 +606,15 @@ section{
     margin: 2rem;
 }
 
+.skills h2{
+    font-size: 4rem;
+}
+
 /* SKILLS barra   */
 .skills-content .progress{
     padding: 1rem 0;
 }
+
 
 .skills-content .progress h3{
     font-size: 1.7rem;
@@ -493,16 +649,16 @@ section{
     width: 85%;
 }
 .skills-column:nth-child(2) .skills-content   .progress:nth-child(1) .bar  span{
-    width: 75%;
+    width: 100%;
 }
 .skills-column:nth-child(2) .skills-content   .progress:nth-child(2) .bar  span{
     width: 90%;
 }
 .skills-column:nth-child(2) .skills-content   .progress:nth-child(3) .bar  span{
-    width: 60%;
+    width: 90%;
 }
 .skills-column:nth-child(2) .skills-content   .progress:nth-child(4) .bar  span{
-    width: 84%;
+    width: 85%;
 }
 
 
